@@ -8,7 +8,6 @@ export const theme: Theme = {
   },
   colors: {
     typography: "#111",
-    background: "#fff",
     base: {
       primary: "#fafafa",
       secondary: "#f4f4f4",
