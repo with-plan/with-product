@@ -1,6 +1,8 @@
 import { Noto_Serif_JP } from "@next/font/google";
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
+import { AppProps } from "next/app";
+import { ThemeProvider } from "theme-ui";
+import { theme } from "@/styles/theme";
+import "@/styles/globals.css";
 
 const notoSerifJp = Noto_Serif_JP({
   weight: ["700", "500"],
@@ -11,14 +13,14 @@ const notoSerifJp = Noto_Serif_JP({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <style jsx global>{`
         html {
           font-family: ${notoSerifJp.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 
