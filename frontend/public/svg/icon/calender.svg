@@ -1,0 +1,33 @@
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_48" data-name="長方形 48" width="100" height="100" fill="none" stroke="#c9ba99" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_52" data-name="長方形 52" width="82" height="84" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="マスクグループ_7" data-name="マスクグループ 7" clip-path="url(#clip-path)">
+    <g id="グループ_49" data-name="グループ 49" transform="translate(9 7.292)">
+      <g id="グループ_46" data-name="グループ 46">
+        <g id="グループ_45" data-name="グループ 45" clip-path="url(#clip-path-2)">
+          <rect id="長方形_51" data-name="長方形 51" width="78.583" height="61.406" transform="translate(1.708 20.915)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <rect id="長方形_53" data-name="長方形 53" width="13.667" height="13.431" transform="translate(11.958 33.99)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="長方形_54" data-name="長方形 54" width="13.667" height="13.431" transform="translate(34.167 33.99)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="長方形_55" data-name="長方形 55" width="13.667" height="13.431" transform="translate(56.375 33.99)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="長方形_56" data-name="長方形 56" width="13.667" height="13.431" transform="translate(11.958 55.815)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="長方形_57" data-name="長方形 57" width="13.667" height="13.431" transform="translate(34.167 55.815)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="長方形_58" data-name="長方形 58" width="13.667" height="13.431" transform="translate(56.375 55.815)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="グループ_48" data-name="グループ 48">
+        <g id="グループ_47" data-name="グループ 47" clip-path="url(#clip-path-2)">
+          <rect id="長方形_59" data-name="長方形 59" width="8.542" height="12.592" transform="translate(12.813 1.817)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <rect id="長方形_60" data-name="長方形 60" width="8.542" height="12.592" transform="translate(36.729 1.817)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <rect id="長方形_61" data-name="長方形 61" width="8.542" height="12.592" transform="translate(60.646 1.817)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path id="パス_58" data-name="パス 58" d="M71.479,23.83v4.407H62.937V23.83H47.563v4.407H39.021V23.83H23.646v4.407H15.1V23.83H4V34.743H82.583V23.83Z" transform="translate(-2.292 -13.828)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

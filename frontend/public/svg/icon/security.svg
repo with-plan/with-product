@@ -1,0 +1,14 @@
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_48" data-name="長方形 48" width="100" height="100" fill="none" stroke="#c9ba99" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="マスクグループ_7" data-name="マスクグループ 7" clip-path="url(#clip-path)">
+    <g id="グループ_38" data-name="グループ 38" transform="translate(-1257.591 -3364.672)">
+      <path id="パス_54" data-name="パス 54" d="M1227.7,96.062A75.517,75.517,0,0,0,1251.441,77.8c14.834-17.141,17.587-36.251,18.261-43.826a78.438,78.438,0,0,1-21.913-7.3A78.47,78.47,0,0,1,1227.7,12.062a78.506,78.506,0,0,1-20.087,14.609,78.448,78.448,0,0,1-21.913,7.3c.673,7.576,3.426,26.686,18.261,43.826A75.505,75.505,0,0,0,1227.7,96.062Z" transform="translate(79.888 3360.61)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="パス_55" data-name="パス 55" d="M1274.572,84.5a16.435,16.435,0,1,1-16.435-16.435" transform="translate(49.454 3330.176)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="パス_56" data-name="パス 56" d="M1265.7,83.019l7.3,7.3,14.609-18.261" transform="translate(36.411 3328.001)" fill="none" stroke="#c9ba99" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
