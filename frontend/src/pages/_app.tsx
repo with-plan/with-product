@@ -8,7 +8,7 @@ const notoSerifJp = Noto_Serif_JP({
   weight: ["700", "500", "400"],
   style: ["normal"],
   subsets: ["latin"],
-  display: "swap", // ここが大事
+  display: "swap",
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <style jsx global>{`
         html {
           font-family: ${notoSerifJp.style.fontFamily};
+          color: #111;
         }
       `}</style>
       <Component {...pageProps} />
