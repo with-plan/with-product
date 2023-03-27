@@ -2,6 +2,7 @@ import { Logo } from "@/components/atoms/Logo";
 import { MenuButton } from "@/components/molecules/MenuButton";
 import { useState } from "react";
 import { Box } from "theme-ui";
+import { ServiceLinks } from "../../molecules/ServiceLinks";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -26,7 +27,7 @@ export function Header() {
           position: "fixed",
           top: 0,
           left: 0,
-          zIndex: 10,
+          zIndex: isOpen ? 10 : -10,
           width: "100vw",
           height: "100vh",
           opacity: isOpen ? "1" : "0",
@@ -43,6 +44,19 @@ export function Header() {
           }}
         >
           <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        </Box>
+        <Box sx={{ p: 4 }}>
+          <ul style={{ fontSize: "22px", fontWeight: "bold" }}>
+            <li>会社概要</li>
+            <li style={{ marginTop: "30px" }}>お問い合わせ</li>
+          </ul>
+        </Box>
+        <Box sx={{ p: 4, mt: 5 }}>
+          <ServiceLinks />
+        </Box>
+
+        <Box sx={{ bg: "accent.tertiary", mt: -10, pt: 8 }}>
+          <Box></Box>
         </Box>
       </Box>
     </Box>
