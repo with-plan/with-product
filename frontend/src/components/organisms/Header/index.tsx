@@ -7,19 +7,24 @@ import { ServiceLinks } from "../../molecules/ServiceLinks";
 export function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <Box
-      as="header"
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        px: 3,
-      }}
-    >
-      <Box sx={{ width: "120px" }}>
-        <Logo />
+    <Box as="header">
+      <Box
+        sx={{
+          maxWidth: "1000px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: 3,
+          mx: "auto",
+        }}
+      >
+        <Box sx={{ width: "120px" }}>
+          <Logo />
+        </Box>
+        <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
       </Box>
-      <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+
+      {/* メニュー */}
       <Box
         as="menu"
         sx={{
