@@ -1,3 +1,4 @@
+import { Children } from "react";
 import { Box } from "theme-ui";
 
 interface Typography {
@@ -8,12 +9,12 @@ interface Typography {
 
 const styles = {
   h1: {
-    fontSize: "76px",
+    fontSize: ["76px", "100px"],
     fontWeight: "bold",
-    lineHeight: "1",
+    lineHeight: ["1", "1.2"],
   },
   h2: {
-    fontSize: "28px",
+    fontSize: ["28px", "34px"],
     fontWeight: "bold",
   },
   h3: {
