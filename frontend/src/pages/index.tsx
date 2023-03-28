@@ -14,12 +14,16 @@ const Home: NextPage = () => {
       <Box
         as="section"
         sx={{
+          maxWidth: "1000px",
           height: "90vh",
-          background:
+          background: [
             "url(/image/bag_half.png) no-repeat 100% 78%,url(/image/mv_sp.png) no-repeat 110% 0%",
+            "url(/image/bag_full.png) no-repeat 94% 86%,url(/image/mv_pc.png) no-repeat 100% 0%",
+          ],
+          mx: "auto",
         }}
       >
-        <Box sx={{ position: "absolute", top: "28%", left: "30px" }}>
+        <Box sx={{ position: "absolute", top: "28%", left: ["30px", "240px"] }}>
           <Typography as="h1">
             With
             <br />
@@ -29,65 +33,84 @@ const Home: NextPage = () => {
         <Box
           sx={{
             position: "absolute",
-            bottom: "0",
+            bottom: "-20px",
             left: "0",
             zIndex: -1,
             bg: "base.secondary",
             width: "100%",
-            height: "80px",
+            height: "16vh",
           }}
         />
       </Box>
-      <Box as="section" sx={{ bg: "base.secondary", pt: 5, pb: 10 }}>
-        <Box sx={{ position: "relative" }}>
+      <Box as="section" sx={{ bg: "base.secondary", pt: 5, pb: [10, "120px"] }}>
+        <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
+          <Box sx={{ position: "relative" }}>
+            <Box
+              sx={{
+                background: [
+                  "url(image/subtitle_abouts.png) no-repeat -4px -18px",
+                  "url(image/subtitle_abouts.png) no-repeat -4px -10px",
+                ],
+                pt: 6,
+                pl: 4,
+              }}
+            >
+              <Typography as="h2">With Productについて</Typography>
+            </Box>
+          </Box>
           <Box
             sx={{
-              background: "url(image/subtitle_abouts.png) no-repeat -4px -18px",
-              pt: 6,
-              pl: 4,
+              display: "flex",
+              flexDirection: ["column", "row"],
+              justifyContent: "space-between",
+              mt: ["0px", 7],
             }}
           >
-            <Typography as="h2">With Productについて</Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            position: "relative",
-            width: "88%",
-            height: "309px",
-            mx: "auto",
-          }}
-        >
-          <Image
-            src="/image/catch_abouts.png"
-            layout="fill"
-            objectFit="contain"
-            alt="検品の様子"
-          />
-        </Box>
-        <Box sx={{ p: 4 }}>
-          <Typography as="p">
-            With ProductはWith企画が運営を行なっている古物商の事業です。
-            <br />
-            ブランド商品を中心に複数のサービスで販売しております。
-            <br />
-            すべての商品を従業員の手で検品・梱包しているため、品質の高い状態でお客様の元へお届けすることが可能です。
-            <br />
-            また、古物商許可番号を取得しているため、各サービスで安心してご購入いただけます。
-          </Typography>
-          <Box sx={{ color: "accent.tertiary", pt: 3 }}>
-            <Typography as="p">古物商許可番号：第62211R047354号</Typography>
+            <Box
+              sx={{
+                position: "relative",
+                width: ["340px", "450px"],
+                height: ["240px", "305px"],
+                boxShadow: [
+                  "-10px 10px 0px 0px #e3e0da",
+                  "-30px 30px 0px 0px #e3e0da",
+                ],
+                mx: "auto",
+              }}
+            >
+              <Image
+                src="/image/catch_abouts.png"
+                layout="fill"
+                objectFit="contain"
+                alt="検品の様子"
+              />
+            </Box>
+            <Box sx={{ maxWidth: "420px", py: [4, "0px"], mx: "auto" }}>
+              <Typography as="p">
+                With ProductはWith企画が運営を行なっている古物商の事業です。
+                <br />
+                ブランド商品を中心に複数のサービスで販売しております。
+                <br />
+                すべての商品を従業員の手で検品・梱包しているため、品質の高い状態でお客様の元へお届けすることが可能です。
+                <br />
+                また、古物商許可番号を取得しているため、各サービスで安心してご購入いただけます。
+              </Typography>
+              <Box sx={{ color: "accent.tertiary", pt: 3 }}>
+                <Typography as="p">古物商許可番号：第62211R047354号</Typography>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>
+
       <Box as="section" sx={{ pt: "120px" }}>
-        <Box sx={{ position: "relative" }}>
+        <Box sx={{ position: "relative", maxWidth: "1000px", mx: "auto" }}>
           <Box
             sx={{
               background: "url(image/subtitle_flow.png) no-repeat 0px -18px",
               pt: 5,
               pl: 4,
-              pb: "118px",
+              pb: ["118px", "40px"],
             }}
           >
             <Typography as="h2">
@@ -101,73 +124,91 @@ const Home: NextPage = () => {
         <Box
           backgroundColor="accent.primary"
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "72px",
-            p: 4,
+            px: [4, "0px"],
+            pb: ["100px", "0px"],
           }}
         >
-          <Box sx={{ mt: "-80px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: ["column", "row"],
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: ["72px", 4],
+              maxWidth: "1000px",
+              py: ["0px", "110px"],
+              mx: "auto",
+            }}
+          >
+            <Box sx={{ mt: ["-80px", "0px"] }}>
+              <Card
+                number="1"
+                imageName="cart"
+                title="商品のご購入"
+                text={
+                  <Typography as="p">
+                    各サービスからご購入していただきます。（販売に際しての規則、注意事項などは各サービスに準拠いたします。）
+                  </Typography>
+                }
+              />
+            </Box>
+
             <Card
-              number="1"
-              imageName="cart"
-              title="商品のご購入"
+              number="2"
+              imageName="calender"
+              title="配達日の選択"
               text={
                 <Typography as="p">
-                  各サービスからご購入していただきます。（販売に際しての規則、注意事項などは各サービスに準拠いたします。）
+                  各サービスの規約に沿い、ご希望の配達日などをお伝えください。
                 </Typography>
               }
             />
+            <Card
+              number="3"
+              imageName="delivery"
+              title="梱包・発送"
+              text={
+                <Typography as="p">
+                  With Productが責任をもって梱包・発送いたします。
+                </Typography>
+              }
+            />
+            <Box
+              sx={{
+                display: ["none", "block"],
+                width: ["0px", "900px"],
+                pt: ["0px", "30px"],
+              }}
+            />
+            <Card
+              number="4"
+              imageName="arrival"
+              title="商品の到着"
+              text={
+                <Typography as="p">
+                  運送会社からご指定いただいた配達先にご注文の商品が到着します。
+                </Typography>
+              }
+            />
+            <Card
+              number="5"
+              imageName="security"
+              title="到着商品のご確認"
+              text={
+                <>
+                  <Typography as="p">
+                    念のため中身と商品の状態をご確認ください。
+                  </Typography>
+                  <Box sx={{ pt: "16px" }} />
+                  <Typography as="p">
+                    万が一不備などがあれば、大変お手数ですが
+                    <Link href="/contact">お問い合わせ</Link>
+                    より弊社にご連絡いただきますようお願いいたします。
+                  </Typography>
+                </>
+              }
+            />
           </Box>
-
-          <Card
-            number="2"
-            imageName="calender"
-            title="配達日の選択"
-            text={
-              <Typography as="p">
-                各サービスの規約に沿い、ご希望の配達日などをお伝えください。
-              </Typography>
-            }
-          />
-          <Card
-            number="3"
-            imageName="delivery"
-            title="梱包・発送"
-            text={
-              <Typography as="p">
-                With Productが責任をもって梱包・発送いたします。
-              </Typography>
-            }
-          />
-          <Card
-            number="4"
-            imageName="arrival"
-            title="商品の到着"
-            text={
-              <Typography as="p">
-                運送会社からご指定いただいた配達先にご注文の商品が到着します。
-              </Typography>
-            }
-          />
-          <Card
-            number="5"
-            imageName="security"
-            title="到着商品のご確認"
-            text={
-              <>
-                <Typography as="p">
-                  念のため中身と商品の状態をご確認ください。
-                </Typography>
-                <Box sx={{ pt: "16px" }} />
-                <Typography as="p">
-                  万が一不備などがあれば、大変お手数ですが
-                  <Link href="/contact">お問い合わせ</Link>
-                  より弊社にご連絡いただきますようお願いいたします。
-                </Typography>
-              </>
-            }
-          />
         </Box>
       </Box>
       <Box as="section" sx={{ py: "100px", px: 4 }}>
