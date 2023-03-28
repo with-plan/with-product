@@ -20,4 +20,5 @@ export const theme: Theme = {
     link: "#508cb2",
   },
   space: [0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60],
+  breakpoints: ["@media (min-width: 900px)"],
 };
