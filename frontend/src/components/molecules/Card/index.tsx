@@ -16,6 +16,7 @@ export function Card({ number, imageName, title, text }: CardProps) {
       sx={{
         position: "relative",
         display: "flex",
+        maxWidth: "300px",
         flexDirection: "column",
         alignItems: "center",
         p: "34px",
