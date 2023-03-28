@@ -10,6 +10,7 @@ export function Header() {
     <Box as="header">
       <Box
         sx={{
+          width: "100%",
           maxWidth: "1000px",
           display: "flex",
           justifyContent: "space-between",
