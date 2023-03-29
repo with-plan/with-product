@@ -6,6 +6,13 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Box } from "theme-ui";
+import { Footer } from "@/components/molecules/Footer";
+import { keyframes } from "@emotion/react";
+
+const scrollGuide = keyframes({
+  "0%": { transform: "translateY(-100%)" },
+  "100%": { transform: "translateY(100%)" },
+});
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +21,7 @@ const Home: NextPage = () => {
       <Box
         as="section"
         sx={{
+          position: "relative",
           maxWidth: "1000px",
           height: "90vh",
           background: [
@@ -23,25 +31,51 @@ const Home: NextPage = () => {
           mx: "auto",
         }}
       >
-        <Box sx={{ position: "absolute", top: "28%", left: ["30px", "240px"] }}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: ["28%", "18%"],
+            left: ["30px", "0px"],
+          }}
+        >
           <Typography as="h1">
             With
             <br />
             Product
           </Typography>
         </Box>
+
         <Box
           sx={{
             position: "absolute",
-            bottom: "-20px",
-            left: "0",
-            zIndex: -1,
-            bg: "base.secondary",
-            width: "100%",
-            height: "16vh",
+            bottom: "68px",
+            left: [5, "0px"],
+            zIndex: 10,
+            width: "2px",
+            height: "100px",
+            overflow: "hidden",
+            "::before": {
+              content: '""',
+              display: "block",
+              width: "2px",
+              height: "100px",
+              background: "accent.tertiary",
+              animation: `${scrollGuide} 1.8s infinite`,
+            },
           }}
         />
       </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "-20px",
+          left: "0",
+          zIndex: -1,
+          bg: "base.secondary",
+          width: "100%",
+          height: ["20vh", "16vh"],
+        }}
+      />
       <Box as="section" sx={{ bg: "base.secondary", pt: 5, pb: [10, "120px"] }}>
         <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
           <Box sx={{ position: "relative" }}>
@@ -63,14 +97,14 @@ const Home: NextPage = () => {
               display: "flex",
               flexDirection: ["column", "row"],
               justifyContent: "space-between",
-              mt: ["0px", 7],
+              mt: [4, 7],
             }}
           >
             <Box
               sx={{
                 position: "relative",
                 width: ["340px", "450px"],
-                height: ["240px", "305px"],
+                height: ["230px", "305px"],
                 boxShadow: [
                   "-10px 10px 0px 0px #e3e0da",
                   "-30px 30px 0px 0px #e3e0da",
@@ -85,7 +119,7 @@ const Home: NextPage = () => {
                 alt="検品の様子"
               />
             </Box>
-            <Box sx={{ maxWidth: "420px", py: [4, "0px"], mx: "auto" }}>
+            <Box sx={{ maxWidth: "420px", p: [4, "0px"], mx: "auto" }}>
               <Typography as="p">
                 With ProductはWith企画が運営を行なっている古物商の事業です。
                 <br />
@@ -103,14 +137,23 @@ const Home: NextPage = () => {
         </Box>
       </Box>
 
-      <Box as="section" sx={{ pt: "120px" }}>
-        <Box sx={{ position: "relative", maxWidth: "1000px", mx: "auto" }}>
+      <Box as="section" sx={{ position: "relative", pt: "120px" }}>
+        <Box
+          sx={{
+            position: "relative",
+            maxWidth: "1000px",
+            mx: "auto",
+          }}
+        >
           <Box
             sx={{
-              background: "url(image/subtitle_flow.png) no-repeat 0px -18px",
+              background: [
+                "url(image/subtitle_flow.png) no-repeat 0px -18px",
+                "url(image/subtitle_flow.png) no-repeat 0px -6px",
+              ],
               pt: 5,
               pl: 4,
-              pb: ["118px", "40px"],
+              pb: ["160px", "40px"],
             }}
           >
             <Typography as="h2">
@@ -126,6 +169,13 @@ const Home: NextPage = () => {
           sx={{
             px: [4, "0px"],
             pb: ["100px", "0px"],
+            "::before": {
+              display: ["none", "block"],
+              content: "url(svg/line_curve_pc.svg)",
+              position: "absolute",
+              top: "-220px",
+              right: 0,
+            },
           }}
         >
           <Box
@@ -211,22 +261,53 @@ const Home: NextPage = () => {
           </Box>
         </Box>
       </Box>
-      <Box as="section" sx={{ py: "100px", px: 4 }}>
-        <Box sx={{ position: "relative" }}>
+      <Box
+        as="section"
+        sx={{
+          position: "relative",
+          py: "100px",
+          px: 4,
+          mt: [8, "100px"],
+          "::before": {
+            display: "block",
+            content: '""',
+            // content: "url(svg/line_arch_pc.svg)",
+            backgroundImage: [
+              "url(svg/line_arch_sp.svg)",
+              "url(svg/line_arch_pc.svg)",
+            ],
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            width: "100%",
+            height: "300px",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          },
+        }}
+      >
+        <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
           <Box
             sx={{
-              background: "url(image/subtitle_service.png) no-repeat 0px -26px",
+              position: "relative",
               pt: 5,
-              pl: 4,
-              pb: "118px",
+              pb: [6, 8],
+              mt: [0, "120px"],
+              "::before": {
+                content: "url(image/subtitle_service.png)",
+                position: "absolute",
+                top: [-5, -3],
+                left: -4,
+                zIndex: -10,
+              },
             }}
           >
             <Typography as="h2">各販売サービス</Typography>
           </Box>
+          <ServiceLinks />
         </Box>
-
-        <ServiceLinks />
       </Box>
+      <Footer />
     </>
   );
 };
