@@ -15,7 +15,7 @@ export function Header() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          px: 3,
+          px: [3, "0px"],
           mx: "auto",
         }}
       >
@@ -41,27 +41,29 @@ export function Header() {
           bg: "accent.primary",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            px: 3,
-          }}
-        >
-          <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              px: [3, "0px"],
+            }}
+          >
+            <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+          </Box>
+          <Box sx={{ p: 4 }}>
+            <ul style={{ fontSize: "22px", fontWeight: "bold" }}>
+              <li>会社概要</li>
+              <li style={{ marginTop: "30px" }}>お問い合わせ</li>
+            </ul>
+          </Box>
         </Box>
-        <Box sx={{ p: 4 }}>
-          <ul style={{ fontSize: "22px", fontWeight: "bold" }}>
-            <li>会社概要</li>
-            <li style={{ marginTop: "30px" }}>お問い合わせ</li>
-          </ul>
-        </Box>
-        <Box sx={{ p: 4, mt: 5 }}>
+        <Box sx={{ maxWidth: "1000px", p: 4, mt: 5, mx: "auto" }}>
           <ServiceLinks />
         </Box>
 
-        <Box sx={{ bg: "accent.tertiary", mt: -10, pt: 8 }}>
+        <Box sx={{ bg: "accent.tertiary", height: "100%", mt: -10, pt: 8 }}>
           <Box></Box>
         </Box>
       </Box>
