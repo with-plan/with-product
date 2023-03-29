@@ -1,5 +1,6 @@
 import { Logo } from "@/components/atoms/Logo";
 import { MenuButton } from "@/components/molecules/MenuButton";
+import Link from "next/link";
 import { useState } from "react";
 import { Box } from "theme-ui";
 import { ServiceLinks } from "../../molecules/ServiceLinks";
@@ -7,7 +8,7 @@ import { ServiceLinks } from "../../molecules/ServiceLinks";
 export function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <Box as="header">
+    <Box as="header" sx={{ background: "base.primary" }}>
       <Box
         sx={{
           width: "100%",
@@ -19,9 +20,12 @@ export function Header() {
           mx: "auto",
         }}
       >
-        <Box sx={{ width: "120px" }}>
-          <Logo />
-        </Box>
+        <Link href="/" passHref>
+          <Box sx={{ width: "120px" }}>
+            <Logo />
+          </Box>
+        </Link>
+
         <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
       </Box>
 
