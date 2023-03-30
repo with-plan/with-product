@@ -8,7 +8,15 @@ import { ServiceLinks } from "../../molecules/ServiceLinks";
 export function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <Box as="header" sx={{ background: "base.primary" }}>
+    <Box
+      as="header"
+      sx={{
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+        background: "base.primary",
+      }}
+    >
       <Box
         sx={{
           width: "100%",

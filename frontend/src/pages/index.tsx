@@ -18,40 +18,36 @@ const Home: NextPage = () => {
   return (
     <Box sx={{ background: "base.primary" }}>
       <Header />
-      <Box
-        as="section"
-        sx={{
-          mx: "auto",
-          "::before": {
-            content: '""',
-            display: "block",
-            position: "absolute",
-            bottom: "-100px",
-            left: 0,
-            zIndex: 0,
-            width: "100%",
-            height: ["280px", "200px"],
-            background: "base.secondary",
-          },
-        }}
-      >
+      <Box as="section">
         <Box
           sx={{
+            width: "100%",
             maxWidth: "1000px",
-            height: "90vh",
+            height: "90lvh",
             position: "relative",
-            background: [
-              "url(/image/bag_half.png) no-repeat 100% 60%,url(/image/mv_sp.png) no-repeat 110% 0%",
-              "url(/image/bag_full.png) no-repeat 94% 86%,url(/image/mv_pc.png) no-repeat 100% 0%",
-            ],
             mx: "auto",
+            "::before": {
+              content: '""',
+              display: "block",
+              position: "absolute",
+              bottom: "100px",
+              right: 0,
+              zIndex: 10,
+              width: "100%",
+              height: "100%",
+              background: [
+                "url(/image/bag_half.png) no-repeat 100% 100%, url(/image/mv_sp.png) no-repeat 110% 80px",
+                "url(/image/bag_full.png) no-repeat 94% 100%,url(/image/mv_pc.png) no-repeat 100% 80px",
+              ],
+            },
           }}
         >
           <Box
             sx={{
               position: "absolute",
               top: "18%",
-              left: ["30px", "0px"],
+              left: [3, "0px"],
+              zIndex: 50,
             }}
           >
             <Typography as="h1">
@@ -64,7 +60,7 @@ const Home: NextPage = () => {
           <Box
             sx={{
               position: "absolute",
-              bottom: ["120px", "68px"],
+              bottom: ["120px", "100px"],
               left: [5, "0px"],
               zIndex: 10,
               width: "2px",
@@ -82,7 +78,26 @@ const Home: NextPage = () => {
           />
         </Box>
       </Box>
-      <Box as="section" sx={{ bg: "base.secondary", pt: 5, pb: [10, "120px"] }}>
+      <Box
+        as="section"
+        sx={{
+          position: "relative",
+          bg: "base.secondary",
+          pt: 5,
+          pb: [10, "120px"],
+          "::before": {
+            content: '""',
+            display: "block",
+            position: "absolute",
+            top: "-150px",
+            left: 0,
+            zIndex: 0,
+            width: "100%",
+            height: ["280px", "200px"],
+            background: "base.secondary",
+          },
+        }}
+      >
         <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
           <Box sx={{ position: "relative" }}>
             <Box
