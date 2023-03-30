@@ -16,66 +16,72 @@ const scrollGuide = keyframes({
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Box sx={{ background: "base.primary" }}>
       <Header />
       <Box
         as="section"
         sx={{
-          position: "relative",
-          maxWidth: "1000px",
-          height: "90vh",
-          background: [
-            "url(/image/bag_half.png) no-repeat 100% 78%,url(/image/mv_sp.png) no-repeat 110% 0%",
-            "url(/image/bag_full.png) no-repeat 94% 86%,url(/image/mv_pc.png) no-repeat 100% 0%",
-          ],
           mx: "auto",
+          "::before": {
+            content: '""',
+            display: "block",
+            position: "absolute",
+            bottom: "-100px",
+            left: 0,
+            zIndex: 0,
+            width: "100%",
+            height: ["280px", "200px"],
+            background: "base.secondary",
+          },
         }}
       >
         <Box
           sx={{
-            position: "absolute",
-            top: ["28%", "18%"],
-            left: ["30px", "0px"],
+            maxWidth: "1000px",
+            height: "90vh",
+            position: "relative",
+            background: [
+              "url(/image/bag_half.png) no-repeat 100% 60%,url(/image/mv_sp.png) no-repeat 110% 0%",
+              "url(/image/bag_full.png) no-repeat 94% 86%,url(/image/mv_pc.png) no-repeat 100% 0%",
+            ],
+            mx: "auto",
           }}
         >
-          <Typography as="h1">
-            With
-            <br />
-            Product
-          </Typography>
-        </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "18%",
+              left: ["30px", "0px"],
+            }}
+          >
+            <Typography as="h1">
+              With
+              <br />
+              Product
+            </Typography>
+          </Box>
 
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "68px",
-            left: [5, "0px"],
-            zIndex: 10,
-            width: "2px",
-            height: "100px",
-            overflow: "hidden",
-            "::before": {
-              content: '""',
-              display: "block",
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: ["120px", "68px"],
+              left: [5, "0px"],
+              zIndex: 10,
               width: "2px",
               height: "100px",
-              background: "accent.tertiary",
-              animation: `${scrollGuide} 1.8s infinite`,
-            },
-          }}
-        />
+              overflow: "hidden",
+              "::before": {
+                content: '""',
+                display: "block",
+                width: "2px",
+                height: "100px",
+                background: "accent.tertiary",
+                animation: `${scrollGuide} 1.8s infinite`,
+              },
+            }}
+          />
+        </Box>
       </Box>
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: "-20px",
-          left: "0",
-          zIndex: -1,
-          bg: "base.secondary",
-          width: "100%",
-          height: ["20vh", "16vh"],
-        }}
-      />
       <Box as="section" sx={{ bg: "base.secondary", pt: 5, pb: [10, "120px"] }}>
         <Box sx={{ maxWidth: "1000px", mx: "auto" }}>
           <Box sx={{ position: "relative" }}>
@@ -308,7 +314,7 @@ const Home: NextPage = () => {
         </Box>
       </Box>
       <Footer />
-    </>
+    </Box>
   );
 };
 
