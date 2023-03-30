@@ -13,6 +13,7 @@ export function Breadcrumb(props: BreadcrumbProps) {
         display: "flex",
         gap: 3,
         color: "accent.tertiary",
+        px: [3, "0px"],
         mx: "auto",
       }}
     >
