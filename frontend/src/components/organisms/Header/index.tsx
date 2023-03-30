@@ -58,8 +58,12 @@ export function Header() {
           </Box>
           <Box sx={{ p: 4 }}>
             <ul style={{ fontSize: "22px", fontWeight: "bold" }}>
-              <li>会社概要</li>
-              <li style={{ marginTop: "30px" }}>お問い合わせ</li>
+              <li>
+                <Link href="/company">会社概要</Link>
+              </li>
+              <li style={{ marginTop: "30px" }}>
+                <Link href="/contact">お問い合わせ</Link>
+              </li>
             </ul>
           </Box>
         </Box>
