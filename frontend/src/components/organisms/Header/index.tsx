@@ -41,7 +41,7 @@ export function Header() {
       <Box
         as="menu"
         sx={{
-          display: "block",
+          display: isOpen ? "block" : "none",
           position: "fixed",
           top: 0,
           left: 0,
